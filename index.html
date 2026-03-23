@@ -933,6 +933,343 @@
       .openai-logo-text { text-align: center; }
       .chatgpt-highlight { flex-direction: column; text-align: center; }
     }
+
+    /* ── BEFORE / AFTER ── */
+    .before-after-section { background: linear-gradient(160deg, #FFF3E6, #FFE8CC); }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      margin-top: 56px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 768px) {
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba-arrow { transform: rotate(90deg); padding: 20px 0; }
+    }
+
+    .ba-card {
+      border-radius: 28px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ba-card.before {
+      background: #2C1C10;
+      color: var(--white);
+    }
+
+    .ba-card.after {
+      background: linear-gradient(160deg, var(--orange), #C44B00);
+      color: var(--white);
+    }
+
+    .ba-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      width: fit-content;
+    }
+
+    .ba-card.before .ba-label { background: rgba(255,255,255,0.1); color: #bbb; }
+    .ba-card.after  .ba-label { background: rgba(255,255,255,0.2); color: var(--white); }
+
+    .ba-persona {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ba-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .ba-card.before .ba-avatar { background: rgba(255,255,255,0.08); }
+    .ba-card.after  .ba-avatar { background: rgba(255,255,255,0.2); }
+
+    .ba-persona-text h4 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .ba-persona-text p  { font-size: 13px; opacity: 0.7; }
+
+    .ba-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ba-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    .ba-card.before .ba-item { background: rgba(255,255,255,0.05); }
+    .ba-card.after  .ba-item { background: rgba(255,255,255,0.15); }
+
+    .ba-item-icon { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
+
+    .ba-item-text { font-size: 14px; line-height: 1.6; }
+    .ba-item-text strong { display: block; font-size: 15px; margin-bottom: 2px; }
+
+    .ba-card.before .ba-item-text { color: #ccc; }
+    .ba-card.after  .ba-item-text { color: rgba(255,255,255,0.95); }
+
+    .ba-emotion {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .ba-card.before .ba-emotion { background: rgba(255,255,255,0.06); color: #aaa; }
+    .ba-card.after  .ba-emotion { background: rgba(255,255,255,0.2); color: var(--white); }
+
+    .ba-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .ba-arrow-inner {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--carnation), #FF8FAB);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 8px 24px rgba(232,67,147,0.4);
+    }
+
+    /* ── RESULTS MOCKUP ── */
+    .results-section { background: var(--white); }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    @media (max-width: 768px) { .mockup-grid { grid-template-columns: 1fr; } }
+
+    .mockup-card {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(232,93,4,0.12);
+      box-shadow: 0 16px 48px rgba(232,93,4,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .mockup-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(232,93,4,0.15);
+    }
+
+    .mockup-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .mockup-header .dot-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .mockup-header .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+
+    .mockup-header.orange { background: var(--orange); color: var(--white); }
+    .mockup-header.carnation { background: var(--carnation); color: var(--white); }
+    .mockup-header.amber { background: var(--amber); color: var(--warm-dark); }
+
+    .mockup-body {
+      background: var(--cream);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 260px;
+    }
+
+    .mockup-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+
+    .mockup-bubble {
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--warm-dark);
+    }
+
+    .mockup-bubble.ai {
+      background: var(--white);
+      border: 1px solid rgba(232,93,4,0.15);
+      border-bottom-left-radius: 4px;
+    }
+
+    .mockup-bubble.user {
+      background: linear-gradient(135deg, var(--orange), #C44B00);
+      color: var(--white);
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+      max-width: 85%;
+    }
+
+    .mockup-bubble.result {
+      background: var(--white);
+      border: 1px solid rgba(247,183,49,0.3);
+      border-left: 3px solid var(--amber);
+    }
+
+    .mockup-bubble strong { color: var(--orange); }
+    .mockup-bubble.user strong { color: rgba(255,255,255,0.85); }
+
+    .mockup-input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid rgba(232,93,4,0.2);
+      border-radius: 100px;
+      padding: 10px 16px;
+      margin-top: 4px;
+    }
+
+    .mockup-input span { font-size: 12px; color: var(--gray-mid); flex: 1; }
+    .mockup-input .send-btn {
+      width: 28px;
+      height: 28px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    .mockup-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .mockup-stat {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid rgba(232,93,4,0.1);
+      text-align: center;
+    }
+
+    .mockup-stat .num { font-size: 20px; font-weight: 900; color: var(--orange); }
+    .mockup-stat .lbl { font-size: 10px; color: var(--gray-mid); margin-top: 2px; }
+
+    .mockup-list-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--warm-dark);
+      border: 1px solid rgba(232,93,4,0.1);
+    }
+
+    .mockup-list-item .check {
+      width: 20px;
+      height: 20px;
+      background: #10a37f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .mockup-sns {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(232,93,4,0.12);
+    }
+
+    .mockup-sns .sns-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .mockup-sns .sns-avatar {
+      width: 28px;
+      height: 28px;
+      background: var(--orange-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .mockup-sns .sns-name { font-size: 12px; font-weight: 700; }
+    .mockup-sns .sns-body { font-size: 12px; line-height: 1.6; color: var(--warm-dark); }
+    .mockup-sns .sns-tags { font-size: 11px; color: var(--orange); margin-top: 6px; }
+
+    .result-cta {
+      background: linear-gradient(135deg, var(--orange-light), var(--cream));
+      border-radius: 20px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-top: 40px;
+      border: 1px solid rgba(232,93,4,0.15);
+    }
+
+    .result-cta h3 { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+    .result-cta p { font-size: 15px; color: var(--warm-brown); line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -979,6 +1316,238 @@
           "부모님의 삶을 AI로 더 풍요롭게"라는 마음을 담아,<br />
           자녀가 직접 기획하고 신청하는 특별한 하루입니다.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEFORE / AFTER ── -->
+  <section class="before-after-section">
+    <div class="container">
+      <p class="section-label">변화의 순간</p>
+      <div class="divider"></div>
+      <h2 class="section-title">ChatGPT 하나로<br />하루가 이렇게 달라집니다</h2>
+      <p class="section-desc">치킨집을 운영하는 아버지의 하루 — Before & After</p>
+
+      <div class="ba-grid">
+        <!-- BEFORE -->
+        <div class="ba-card before">
+          <div class="ba-label">😓 Before · AI 이전</div>
+          <div class="ba-persona">
+            <div class="ba-avatar">👨‍🍳</div>
+            <div class="ba-persona-text">
+              <h4>배달 주문 폭주하는 저녁 6시</h4>
+              <p>모든 걸 혼자 감당하는 아버지</p>
+            </div>
+          </div>
+          <div class="ba-items">
+            <div class="ba-item">
+              <div class="ba-item-icon">📝</div>
+              <div class="ba-item-text">
+                <strong>홍보 문자 직접 작성</strong>
+                매주 이벤트 문자를 손으로 쓰는 데 30분 소요
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">📞</div>
+              <div class="ba-item-text">
+                <strong>고객 응대 전화 직접 받기</strong>
+                조리 중에도 울리는 전화, 주문 실수 잦음
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">📱</div>
+              <div class="ba-item-text">
+                <strong>배달앱 설명 글 매번 수작업</strong>
+                메뉴 업데이트마다 하나씩 손으로 입력
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">💸</div>
+              <div class="ba-item-text">
+                <strong>월말 정산 엑셀로 수작업</strong>
+                영수증 모아 밤 11시에 계산기 두드리기
+              </div>
+            </div>
+          </div>
+          <div class="ba-emotion">
+            <span>😮‍💨</span> "퇴근 후에도 일이 끝나지 않아요"
+          </div>
+        </div>
+
+        <!-- ARROW -->
+        <div class="ba-arrow">
+          <div class="ba-arrow-inner">→</div>
+        </div>
+
+        <!-- AFTER -->
+        <div class="ba-card after">
+          <div class="ba-label">✨ After · ChatGPT 활용 후</div>
+          <div class="ba-persona">
+            <div class="ba-avatar">😊</div>
+            <div class="ba-persona-text">
+              <h4>여유로운 저녁 6시</h4>
+              <p>AI가 반복 업무를 대신하는 아버지</p>
+            </div>
+          </div>
+          <div class="ba-items">
+            <div class="ba-item">
+              <div class="ba-item-icon">⚡</div>
+              <div class="ba-item-text">
+                <strong>홍보 문자 10초 만에 자동 생성</strong>
+                "이번 주 이벤트 문자 써줘" → 즉시 완성
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">🤖</div>
+              <div class="ba-item-text">
+                <strong>고객 응대 메시지 템플릿 자동화</strong>
+                자주 쓰는 답장 10종 AI가 미리 준비
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">📸</div>
+              <div class="ba-item-text">
+                <strong>사진 찍으면 SNS 게시물 자동 완성</strong>
+                메뉴 사진 올리면 설명+해시태그 생성
+              </div>
+            </div>
+            <div class="ba-item">
+              <div class="ba-item-icon">📊</div>
+              <div class="ba-item-text">
+                <strong>지출 내역 말하면 자동 정리</strong>
+                "오늘 재료비 45,000원" → 자동 분류·합산
+              </div>
+            </div>
+          </div>
+          <div class="ba-emotion">
+            <span>🌸</span> "이제 저녁엔 가족과 함께해요"
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS MOCKUP ── -->
+  <section class="results-section">
+    <div class="container">
+      <p class="section-label">실제 결과물</p>
+      <div class="divider"></div>
+      <h2 class="section-title">이런 도구를<br />직접 만들게 됩니다</h2>
+      <p class="section-desc">코딩 몰라도 괜찮습니다. ChatGPT가 함께 만들어드립니다.</p>
+
+      <div class="mockup-grid">
+
+        <!-- MOCKUP 1: 마케팅 자동화 -->
+        <div class="mockup-card">
+          <div class="mockup-header orange">
+            <div class="dot-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            📣 마케팅 자동화 도구
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-tag">✨ ChatGPT가 즉시 생성</div>
+            <div class="mockup-bubble user">
+              오늘 후라이드 치킨 1+1 행사야. 홍보 문자 써줘 🍗
+            </div>
+            <div class="mockup-bubble ai">
+              <strong>📱 고객 문자 (완성)</strong><br />
+              [우리동네치킨] 오늘 하루만! 🍗<br />
+              후라이드 치킨 1+1 특가 이벤트<br />
+              오후 5시~9시 한정 · 선착순 20팀<br />
+              ☎ 010-0000-0000으로 미리 예약하세요!
+            </div>
+            <div class="mockup-sns">
+              <div class="sns-top">
+                <div class="sns-avatar">🍗</div>
+                <div class="sns-name">우리동네치킨 공식</div>
+              </div>
+              <div class="sns-body">오늘만 이 가격! 바삭한 후라이드 치킨 1+1 🔥 놓치지 마세요!</div>
+              <div class="sns-tags">#치킨 #1+1 #오늘만 #할인이벤트</div>
+            </div>
+            <div class="mockup-input">
+              <span>다음 이벤트 내용 입력...</span>
+              <div class="send-btn">→</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCKUP 2: 고객 응대 자동화 -->
+        <div class="mockup-card">
+          <div class="mockup-header carnation">
+            <div class="dot-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            💬 고객 응대 자동화
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-tag">🤖 응답 템플릿 자동 생성</div>
+            <div class="mockup-list-item">
+              <div class="check">✓</div>
+              <span><strong>예약 확인 문자</strong> — 자동 발송</span>
+            </div>
+            <div class="mockup-list-item">
+              <div class="check">✓</div>
+              <span><strong>배달 지연 안내</strong> — 1초 완성</span>
+            </div>
+            <div class="mockup-list-item">
+              <div class="check">✓</div>
+              <span><strong>리뷰 감사 답글</strong> — 자동 생성</span>
+            </div>
+            <div class="mockup-list-item">
+              <div class="check">✓</div>
+              <span><strong>휴무일 공지</strong> — 즉시 발송</span>
+            </div>
+            <div class="mockup-list-item">
+              <div class="check">✓</div>
+              <span><strong>클레임 응대 문구</strong> — 정중한 톤</span>
+            </div>
+            <div class="mockup-bubble result" style="margin-top: 4px;">
+              <strong>⏱ 절약 시간:</strong> 하루 평균 <strong>47분</strong> 단축<br />
+              <strong>📈 리뷰 응답률:</strong> 12% → <strong>94%</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCKUP 3: 행정/정산 자동화 -->
+        <div class="mockup-card">
+          <div class="mockup-header amber">
+            <div class="dot-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            📊 행정·정산 자동화
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-tag">💰 지출 자동 분류 & 정산</div>
+            <div class="mockup-bubble user">
+              오늘 재료비 48,000 배달포장비 12,000 썼어
+            </div>
+            <div class="mockup-bubble ai">
+              <strong>📋 오늘의 지출 정리 완료</strong><br />
+              재료비 ···· 48,000원<br />
+              포장재 ···· 12,000원<br />
+              ──────────────<br />
+              오늘 합계 ·· <strong>60,000원</strong>
+            </div>
+            <div class="mockup-stat-row">
+              <div class="mockup-stat">
+                <div class="num">↓32%</div>
+                <div class="lbl">행정 시간 절감</div>
+              </div>
+              <div class="mockup-stat">
+                <div class="num">자동</div>
+                <div class="lbl">월별 리포트</div>
+              </div>
+              <div class="mockup-stat">
+                <div class="num">0원</div>
+                <div class="lbl">별도 앱 비용</div>
+              </div>
+              <div class="mockup-stat">
+                <div class="num">5분</div>
+                <div class="lbl">월말 정산</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-cta">
+        <h3>🌸 이 모든 도구를, 단 4시간 안에 직접 만듭니다</h3>
+        <p>코딩 경험 없어도 괜찮습니다. ChatGPT와 OpenAI Codex가 함께합니다.<br />어버이날, 부모님께 세상에서 하나뿐인 AI 도구를 선물하세요.</p>
       </div>
     </div>
   </section>
